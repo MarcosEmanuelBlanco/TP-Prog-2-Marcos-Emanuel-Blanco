@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Meta
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Fondo
+  - Water
+  - UI
+  - Enemigos
+  - Plataformas
+  - Jugador
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Plataformas
+    uniqueID: 3244560181
+    locked: 0
+  - name: Personajes
+    uniqueID: 2426257085
+    locked: 0
+  - name: Fondo
+    uniqueID: 3377825033
+    locked: 0
