@@ -42,12 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 3377825033
+    locked: 0
   - name: Plataformas
     uniqueID: 3244560181
     locked: 0
   - name: Personajes
     uniqueID: 2426257085
     locked: 0
-  - name: Fondo
-    uniqueID: 3377825033
+  - name: UI
+    uniqueID: 4035226587
     locked: 0

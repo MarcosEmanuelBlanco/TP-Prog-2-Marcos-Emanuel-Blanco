@@ -6,7 +6,6 @@ public class Jugador : MonoBehaviour
 {
     [Header("Configuracion")]
     [SerializeField] private float vida = 5f;
-
     public void ModificarVida(float puntos)
     {
         vida += puntos;
@@ -16,13 +15,16 @@ public class Jugador : MonoBehaviour
 
     private bool EstasVivo()
     {
+        if(vida <= 0)
+        {
+            Debug.Log("PERDISTE");
+        }
         return vida > 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("Meta")) { return; }
-
         Debug.Log("GANASTE");
     }
 }
