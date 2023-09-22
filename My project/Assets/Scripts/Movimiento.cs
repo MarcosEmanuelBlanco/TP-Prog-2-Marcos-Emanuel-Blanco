@@ -11,6 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Variables de uso interno en el script
     private float moverHorizontal;
     private Vector2 direccion;
+    private bool orientacionDer = true;
 
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
@@ -37,7 +38,7 @@ public class NewBehaviourScript : MonoBehaviour
         moverHorizontal = Input.GetAxis("Horizontal");
         direccion = new Vector2(moverHorizontal, 0f);
         int velocidadX = (int)miRigidbody2D.velocity.x;
-        miSprite.flipX = velocidadX < 0;
+        FlipHorizontal();
         miAnimator.SetInteger("Velocidad", velocidadX);
         miAnimator.SetBool("EnAire", !EnContactoConPlataforma());
     }
@@ -49,5 +50,13 @@ public class NewBehaviourScript : MonoBehaviour
     private bool EnContactoConPlataforma()
     {
         return miCollider2D.IsTouchingLayers(saltarMask);
+    }
+
+    private void FlipHorizontal()
+    {
+        if((orientacionDer == true && moverHorizontal < 0f) || (orientacionDer == false && moverHorizontal > 0f)) { 
+            orientacionDer = !orientacionDer;
+            miSprite.flipX = !miSprite.flipX;
+        }
     }
 }
