@@ -101,5 +101,5 @@ MonoBehaviour:
   - {fileID: 7508232215909716194, guid: f284a6e2289dd334280fb6e3f001dd3f, type: 3}
   - {fileID: 8139200516249386485, guid: 3f784b548b8b0284f84466c789975224, type: 3}
   - {fileID: 8956448648296848835, guid: 76c4e59c76f8a754e99f54f0c24b5762, type: 3}
-  tiempoEspera: 1
-  tiempoIntervalo: 10
+  tiempoEspera: 10
+  tiempoIntervalo: 20

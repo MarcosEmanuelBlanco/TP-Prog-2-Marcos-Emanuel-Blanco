@@ -13,9 +13,12 @@ GameObject:
   - component: {fileID: 5019781375194023118}
   - component: {fileID: 8916940862022113236}
   - component: {fileID: 7106827398107997914}
+  - component: {fileID: 9020052313362827987}
+  - component: {fileID: -7877167909772247118}
+  - component: {fileID: 6603085767431335349}
   m_Layer: 6
   m_Name: Enemigo
-  m_TagString: Untagged
+  m_TagString: Enemigos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +35,9 @@ Transform:
   m_LocalPosition: {x: 6.07, y: -3, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 353929570470295591}
+  - {fileID: 7656893089977380070}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8392885446488203674
@@ -127,6 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntos: 1
+  vidaEnemigo: 5
+  valorPorEliminacion: 1
 --- !u!61 &7106827398107997914
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,3 +179,122 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7359905, y: 0.44264722}
   m_EdgeRadius: 0
+--- !u!95 &9020052313362827987
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451800701213782428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0972e3a6b77ad0418f1b0ee86be0bf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7877167909772247118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451800701213782428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf56f82dd7d0394ab4b061a612a0045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorBorde: {fileID: 353929570470295591}
+  distancia: 2
+  velocidad: -2
+  preferenciaDeteccion: 1
+  yendoDerecha: 1
+  aturdido: 0
+  duracionAturdimiento: 2
+--- !u!114 &6603085767431335349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451800701213782428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678ce4f07f4c0594ca7f879d960aff96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atacando: 0
+  dagnoGolpe: 1
+  radioAtaque: 0.6
+  intervaloEntreAtaques: 2
+  controladorGolpeEnemigo: {fileID: 7656893089977380070}
+--- !u!1 &3849097205606225681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353929570470295591}
+  m_Layer: 6
+  m_Name: ControladorBorde
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &353929570470295591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3849097205606225681}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.364, y: 0.1, z: -0.028923396}
+  m_LocalScale: {x: 0.28571427, y: 0.28571427, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7352211435829899346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9065643717896199407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7656893089977380070}
+  m_Layer: 0
+  m_Name: AreaGolpe
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7656893089977380070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9065643717896199407}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.43, y: -0.252, z: 0}
+  m_LocalScale: {x: 0.28571427, y: 0.28571427, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7352211435829899346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 839629810660413103}
   - component: {fileID: 1746485842974562044}
   - component: {fileID: 5697975230762807923}
+  - component: {fileID: 8689073843029602963}
   m_Layer: 6
   m_Name: BolaDeHielo
-  m_TagString: Untagged
+  m_TagString: Bola
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +149,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &8689073843029602963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956448648296848835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25aa8eeec9a0ddf439e74803996b9023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reduccionPorHielo: 1
+  multiplicadorPorJefe: 2
+  duracionHielo: 5
+  velocidadReboteBola: {x: 0, y: 0}

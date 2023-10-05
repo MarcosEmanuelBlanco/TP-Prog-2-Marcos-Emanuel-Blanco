@@ -108,8 +108,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 8916940862022113236, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+      propertyPath: vidaEnemigo
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9020052313362827987, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+    - {fileID: -7877167909772247118, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+    - {fileID: 6603085767431335349, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 2793273094179290611, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+    - {fileID: 3849097205606225681, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2451800701213782428, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}

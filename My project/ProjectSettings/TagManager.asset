@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Meta
+  - Enemigos
+  - EnemigosEnojados
+  - Jefe
+  - Suelo
+  - Bola
   layers:
   - Default
   - TransparentFX

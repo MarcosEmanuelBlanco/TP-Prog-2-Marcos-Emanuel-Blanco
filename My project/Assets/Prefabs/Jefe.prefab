@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &37652188188448957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582543633639490108}
+  m_Layer: 0
+  m_Name: PuntoEstruendo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1582543633639490108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37652188188448957}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.89735883, y: -0.849, z: -0.03093652}
+  m_LocalScale: {x: 0.28571427, y: 0.28571427, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8928825108611087025}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557447631240613800
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,9 +75,11 @@ GameObject:
   - component: {fileID: 3405961480028640516}
   - component: {fileID: -1366617356194007530}
   - component: {fileID: 2555263392175033208}
+  - component: {fileID: -6164694317799517943}
+  - component: {fileID: 7278244927139199108}
   m_Layer: 6
   m_Name: Jefe
-  m_TagString: Untagged
+  m_TagString: Jefe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,6 +102,7 @@ Transform:
   - {fileID: 2659739536905233873}
   - {fileID: 3695390674933881861}
   - {fileID: 3094913281989295908}
+  - {fileID: 1582543633639490108}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3378412963999049385
@@ -215,6 +249,7 @@ MonoBehaviour:
   duracionDeCorreteo: 2
   velocidadCorreteo: 6
   divisorDuracionDeCorreteo: 2
+  tamanoEstruendo: {x: 12, y: 1}
   orbesRojas:
   - {fileID: 8582817335037676662, guid: d9792cbd61e2d8c498632b96183195f3, type: 3}
   - {fileID: 8582817335037676662, guid: d9792cbd61e2d8c498632b96183195f3, type: 3}
@@ -227,6 +262,45 @@ MonoBehaviour:
   - {fileID: 2659739536905233873}
   - {fileID: 3695390674933881861}
   - {fileID: 3094913281989295908}
+  areaEstruendo: {fileID: 1582543633639490108}
+  fuerzaEstruendo: 10
+  dagnoEstruendo: 10
+--- !u!114 &-6164694317799517943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087535408670997553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d19e41ff4ab6d439fc87792b0bc0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntos: 10
+  vidaEnemigo: 100
+  valorPorEliminacion: 1
+--- !u!95 &7278244927139199108
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087535408670997553}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d267e186a6e3b94479fd7ba5cf991405, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1149772514253336720
 GameObject:
   m_ObjectHideFlags: 0

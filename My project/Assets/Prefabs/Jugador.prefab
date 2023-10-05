@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7598194091271894118}
   - component: {fileID: 6646350031846117249}
   - component: {fileID: 7702978792266049066}
+  - component: {fileID: 393561281325660}
+  - component: {fileID: 1710782152065630241}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Player
@@ -34,9 +36,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.26, y: -3, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2369631735761537575}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8732415269131821349
@@ -130,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189ec383261fd9b44aba9d447fec1c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 12
+  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
 --- !u!114 &5767190824864532085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,9 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b79126918ac76c4ea60a09aaa6f58e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8
-  jumpSFX: {fileID: 8300000, guid: 51c72021949c4f94dac78b931bf72f70, type: 3}
-  collisionSFX: {fileID: 8300000, guid: 34ab0cc6e72a0224db073b88db8edfc8, type: 3}
+  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
 --- !u!114 &2068777766212651849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b74e6b56f0a9f64c9a9fc07b4c14e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 5
+  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
 --- !u!61 &7598194091271894118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -191,7 +192,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.065}
+  m_Offset: {x: -0.00000023841858, y: -0.043405846}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -202,7 +203,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 1.55}
+  m_Size: {x: 0.39078802, y: 0.91035867}
   m_EdgeRadius: 0
 --- !u!95 &6646350031846117249
 Animator:
@@ -321,3 +322,61 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &393561281325660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442629190315670105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fedef84ead9e2548bf532ccb8180852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posicionControladorGolpe: {fileID: 2369631735761537575}
+  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
+--- !u!114 &1710782152065630241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442629190315670105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9747828b0c6961419c8b2d80237c933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
+--- !u!1 &7796095046029067376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2369631735761537575}
+  m_Layer: 0
+  m_Name: ControladorAtaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2369631735761537575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796095046029067376}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.118, y: 0.003, z: 0.052151956}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4789486549090937847}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
