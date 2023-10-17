@@ -26,7 +26,7 @@ public class AtaqueRocoso : MonoBehaviour
 
     private void Cabezazo()
     {
-        if(vinculoMovimiento.aturdido == true) {
+        if(vinculoMovimiento.aturdido == false) {
             Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpeEnemigo.position, radioAtaque);
             foreach (Collider2D col in objetos)
             {

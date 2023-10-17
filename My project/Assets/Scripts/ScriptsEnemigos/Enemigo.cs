@@ -8,13 +8,9 @@ public class Enemigo : MonoBehaviour
     [Header("Configuracion")]
     [SerializeField] private float puntos = 5f;
     [SerializeField] private float vidaEnemigo;
-    private SpriteRenderer miSpriteRenderer;
+
     public int valorPorEliminacion = 1;
 
-    private void OnEnable()
-    {
-        miSpriteRenderer = GetComponent<SpriteRenderer>();
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

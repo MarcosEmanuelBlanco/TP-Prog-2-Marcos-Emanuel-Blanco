@@ -264,7 +264,7 @@ MonoBehaviour:
   - {fileID: 3094913281989295908}
   areaEstruendo: {fileID: 1582543633639490108}
   fuerzaEstruendo: 10
-  dagnoEstruendo: 10
+  dagnoEstruendo: 2
 --- !u!114 &-6164694317799517943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d19e41ff4ab6d439fc87792b0bc0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: 10
+  puntos: 2
   vidaEnemigo: 100
   valorPorEliminacion: 1
 --- !u!95 &7278244927139199108

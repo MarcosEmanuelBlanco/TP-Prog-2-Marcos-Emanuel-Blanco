@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Progresion : MonoBehaviour
 {
     private Stack<string> ordenMisiones;
     [SerializeField] private PerfilJugador perfilJugador;
+    [SerializeField] private UnityEvent<string> OnAngryRockKillProgress;
+    [SerializeField] private UnityEvent<string> OnCalmRockKillProgress;
+    [SerializeField] private UnityEvent<string> OnBigRockKillProgress;
     // Start is called before the first frame update
     void Start()
     {
+        perfilJugador.RocososEnojadosEliminados = perfilJugador.ValorReinicioRocososEnojados;
+        perfilJugador.RocososComunesEliminados = perfilJugador.ValorReinicioRocososComunes;
+        perfilJugador.GranRocosoEliminado = perfilJugador.ValorReinicioGranRocoso;
+        OnAngryRockKillProgress.Invoke(perfilJugador.rocososEnojadosEliminados.ToString());
+        OnCalmRockKillProgress.Invoke(perfilJugador.rocososComunesEliminados.ToString());
+        OnBigRockKillProgress.Invoke(perfilJugador.granRocosoEliminado.ToString());
         ordenMisiones = new Stack<string>();
         ordenMisiones.Push("El Gran Pétreo se ha ido. Eso debería sanarlos a todos...");
         ordenMisiones.Push("Los pétreos sanos también deben detenerse, no sería bueno que aniquilen a sus hermanos.");
@@ -38,15 +48,19 @@ public class Progresion : MonoBehaviour
     public void EliminarRocosoEnojado(int valorUnidad)
     {
         perfilJugador.RocososEnojadosEliminados += valorUnidad;
+        OnAngryRockKillProgress.Invoke(perfilJugador.rocososEnojadosEliminados.ToString());
+
     }
 
     public void EliminarRocosoComun(int valorUnidad)
     {
         perfilJugador.RocososComunesEliminados += valorUnidad;
+        OnCalmRockKillProgress.Invoke(perfilJugador.rocososComunesEliminados.ToString());
     }
 
     public void EliminarGranRocoso(int valorUnidad)
     {
         perfilJugador.GranRocosoEliminado += valorUnidad;
+        OnBigRockKillProgress.Invoke(perfilJugador.granRocosoEliminado.ToString());
     }
 }

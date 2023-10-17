@@ -12,18 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979db34debbd809468527e725bc2dc38, type: 3}
   m_Name: NuevoPerfilJugador
   m_EditorClassIdentifier: 
-  vida: 100
+  vida: 10
+  vidaMaxima: 10
   velocidad: 12
   fuerzaSalto: 8
+  velocidadRebote: {x: 10, y: 1}
   jumpSFX: {fileID: 8300000, guid: 51c72021949c4f94dac78b931bf72f70, type: 3}
   collisionSFX: {fileID: 8300000, guid: 34ab0cc6e72a0224db073b88db8edfc8, type: 3}
   radioGolpe: 0.8
   dagnoGolpe: 1
-  intervaloEntreGolpes: 1
-  esperaSiguienteAtaque: -0.00032746047
-  rocososComunesEliminados: 6
-  rocososEnojadosEliminados: 6
+  intervaloEntreGolpes: 0.6
+  esperaSiguienteAtaque: -0.0025165277
+  ataqueHabilitado: 1
+  rocososComunesEliminados: 0
+  rocososEnojadosEliminados: 0
   granRocosoEliminado: 0
   totalRocososComunes: 3
   totalRocososEnojados: 3
-  velocidadRebote: {x: 10, y: 1}
+  valorReinicioRocososComunes: 0
+  valorReinicioRocososEnojados: 0
+  valorReinicioGranRocoso: 0

@@ -6,8 +6,11 @@ using UnityEngine;
 public class PerfilJugador : ScriptableObject
 {
     [Header("Configuracion Vida")]
-    [SerializeField] private float vida = 5f;
+    [SerializeField] private float vida;
     public float Vida { get => vida; set => vida = value;}
+
+    [SerializeField] private float vidaMaxima;
+    public float VidaMaxima { get => vidaMaxima; set => vidaMaxima = value; }
 
     [Header("Configuracion Movimiento")]
     [SerializeField] float velocidad = 5f;
@@ -15,6 +18,10 @@ public class PerfilJugador : ScriptableObject
 
     [SerializeField] private float fuerzaSalto = 5f;
     public float FuerzaSalto { get => fuerzaSalto; set => fuerzaSalto = value;}
+
+    [SerializeField] private Vector2 velocidadRebote;
+
+    public Vector2 VelocidadRebote { get => velocidadRebote; set => velocidadRebote = value; }
 
     [Header("Configuracion Sonidos")]
     [SerializeField] private AudioClip jumpSFX;
@@ -36,6 +43,10 @@ public class PerfilJugador : ScriptableObject
     [SerializeField] private float esperaSiguienteAtaque;
     public float EsperaSiguienteAtaque { get => esperaSiguienteAtaque; set => esperaSiguienteAtaque = value;  }
 
+    [SerializeField] private bool ataqueHabilitado = true;
+
+    public bool AtaqueHabilitado { get => ataqueHabilitado; set => ataqueHabilitado = value;}
+
     [Header("Configuracion Orden de Misiones")]
     
     public int rocososComunesEliminados = 0;
@@ -56,7 +67,15 @@ public class PerfilJugador : ScriptableObject
 
     public int TotalRocososEnojados { get => totalRocososEnojados; set => totalRocososEnojados = value; }
 
-    [SerializeField] private Vector2 velocidadRebote;
+    public int valorReinicioRocososComunes = 0;
+    public int ValorReinicioRocososComunes { get => valorReinicioRocososComunes; set => valorReinicioRocososComunes = value; }
 
-    public Vector2 VelocidadRebote {  get => velocidadRebote; set => velocidadRebote = value;}
+    public int valorReinicioRocososEnojados = 0;
+
+    public int ValorReinicioRocososEnojados { get => valorReinicioRocososEnojados; set => valorReinicioRocososEnojados = value; }
+
+    public int valorReinicioGranRocoso = 0;
+    public int ValorReinicioGranRocoso { get => valorReinicioGranRocoso; set => valorReinicioGranRocoso = value; }
+
+
 }

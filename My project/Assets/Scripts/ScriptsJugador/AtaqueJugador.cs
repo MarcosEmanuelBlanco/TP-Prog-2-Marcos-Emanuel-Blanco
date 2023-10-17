@@ -11,20 +11,22 @@ public class AtaqueJugador : MonoBehaviour
     private void Start()
     {
         miAnimator = GetComponent<Animator>();
+        perfilJugador.AtaqueHabilitado = true;
     }
     private void Update()
     {
-        if (perfilJugador.EsperaSiguienteAtaque > 0)
+        if(perfilJugador.AtaqueHabilitado)
         {
-            perfilJugador.EsperaSiguienteAtaque -= Time.deltaTime;
+            if (perfilJugador.EsperaSiguienteAtaque > 0)
+            {
+                perfilJugador.EsperaSiguienteAtaque -= Time.deltaTime;
+            }
+            if (Input.GetKeyDown(KeyCode.C) && Input.GetAxis("Horizontal") == 0 && perfilJugador.EsperaSiguienteAtaque <= 0)
+            {
+                Golpe();
+                perfilJugador.EsperaSiguienteAtaque = perfilJugador.IntervaloEntreGolpes;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.C) && Input.GetAxis("Horizontal") == 0 && perfilJugador.EsperaSiguienteAtaque <= 0)
-        {
-            
-            Golpe();
-            perfilJugador.EsperaSiguienteAtaque = perfilJugador.IntervaloEntreGolpes;
-        }
-
     }
     private void Golpe()
     {

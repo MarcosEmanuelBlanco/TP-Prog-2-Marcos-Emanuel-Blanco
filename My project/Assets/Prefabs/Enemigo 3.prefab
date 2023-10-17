@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603085767431335349, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
       propertyPath: intervaloEntreAtaques
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7352211435829899346, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
       propertyPath: m_LocalScale.x
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c10085388cfee6045bd812960dbf500b, type: 3}
     - target: {fileID: 8916940862022113236, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
       propertyPath: puntos
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9020052313362827987, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
       propertyPath: m_Controller
