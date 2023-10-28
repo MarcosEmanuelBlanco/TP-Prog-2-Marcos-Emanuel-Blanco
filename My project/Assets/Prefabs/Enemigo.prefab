@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 9020052313362827987}
   - component: {fileID: -7877167909772247118}
   - component: {fileID: 6603085767431335349}
+  - component: {fileID: 6126962167650976694}
+  - component: {fileID: 2549899887963494053}
   m_Layer: 6
   m_Name: Enemigo
   m_TagString: Enemigos
@@ -131,7 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d19e41ff4ab6d439fc87792b0bc0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: 0
   vidaEnemigo: 5
   valorPorEliminacion: 1
 --- !u!61 &7106827398107997914
@@ -236,6 +237,39 @@ MonoBehaviour:
   radioAtaque: 0.6
   intervaloEntreAtaques: 4
   controladorGolpeEnemigo: {fileID: 7656893089977380070}
+--- !u!114 &6126962167650976694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451800701213782428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ebf30cec1dd7c40bcaded28d7e5bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duracionFuego: 3
+  dagno: -1
+  multiplicador: -5
+  duracionBaba: 3
+  reduccionBaba: 2
+  reduccionBabaJefe: 1
+  duracionHielo: 3
+  reduccionHielo: 1
+  reduccionHieloJefe: 1
+--- !u!114 &2549899887963494053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2451800701213782428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df19b68eb0d41ca4681a660f2400c548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3849097205606225681
 GameObject:
   m_ObjectHideFlags: 0

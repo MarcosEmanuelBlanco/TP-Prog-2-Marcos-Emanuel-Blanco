@@ -9,6 +9,9 @@ TagManager:
   - Jefe
   - Suelo
   - Bola
+  - BolaDeBaba
+  - BolaDeFuego
+  - BolaDeHielo
   layers:
   - Default
   - TransparentFX

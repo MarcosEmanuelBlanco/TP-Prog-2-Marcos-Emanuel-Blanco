@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3238465037421650210}
   - component: {fileID: 6394259086718224976}
-  - component: {fileID: 9207073570986472778}
   m_Layer: 7
   m_Name: GeneradorAleatorio
   m_TagString: Untagged
@@ -30,7 +29,8 @@ Transform:
   m_LocalPosition: {x: 5.91, y: 3.57, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3002699213961840374}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6394259086718224976
@@ -85,21 +85,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9207073570986472778
+--- !u!1 &2606028807656293366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3002699213961840374}
+  - component: {fileID: 6579559087996058069}
+  - component: {fileID: 6318050486284617888}
+  m_Layer: 7
+  m_Name: PoolerBola
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3002699213961840374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606028807656293366}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3238465037421650210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6579559087996058069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467103878953501494}
+  m_GameObject: {fileID: 2606028807656293366}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5672144f94e964648b80cc4899845274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbesPrefabs:
-  - {fileID: 7508232215909716194, guid: f284a6e2289dd334280fb6e3f001dd3f, type: 3}
-  - {fileID: 8139200516249386485, guid: 3f784b548b8b0284f84466c789975224, type: 3}
-  - {fileID: 8956448648296848835, guid: 76c4e59c76f8a754e99f54f0c24b5762, type: 3}
+  cantidadAleatorios: 3
   tiempoEspera: 10
   tiempoIntervalo: 20
+--- !u!114 &6318050486284617888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606028807656293366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bdb43abc6a4d294c9573fc2bd68780b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bolaFuego: {fileID: 8139200516249386485, guid: 3f784b548b8b0284f84466c789975224, type: 3}
+  bolaBaba: {fileID: 7508232215909716194, guid: f284a6e2289dd334280fb6e3f001dd3f, type: 3}
+  bolaHielo: {fileID: 8956448648296848835, guid: 76c4e59c76f8a754e99f54f0c24b5762, type: 3}
+  tamanoPoolFuego: 3
+  tamanoPoolBaba: 3
+  tamanoPoolHielo: 3

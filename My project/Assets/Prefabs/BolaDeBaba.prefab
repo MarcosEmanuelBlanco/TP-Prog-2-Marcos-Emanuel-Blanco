@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8291910836897460466}
   m_Layer: 6
   m_Name: BolaDeBaba
-  m_TagString: Bola
+  m_TagString: BolaDeBaba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a2b7c11f1a27246bfb19e409747eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reduccionPorPegote: 1
-  multiplicadorPorJefe: 5
-  duracionPegote: 10
-  velocidadReboteBola: {x: 0, y: 0}
+  reduccionBaba: 2
+  reduccionBabaJefe: 1

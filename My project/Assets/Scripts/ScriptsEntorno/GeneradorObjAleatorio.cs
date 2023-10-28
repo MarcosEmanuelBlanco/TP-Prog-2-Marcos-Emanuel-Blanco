@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GeneradorObjAleatorio : MonoBehaviour
 {
-    [SerializeField] private GameObject[] orbesPrefabs; //Más adelante, estos objetos tendrán efectos al colisionar con enemigos.
+    [SerializeField] private int cantidadAleatorios; //Más adelante, estos objetos tendrán efectos al colisionar con enemigos.
 
     [SerializeField]
     [Range(0.5f, 10f)]
@@ -14,6 +14,12 @@ public class GeneradorObjAleatorio : MonoBehaviour
     [Range(0.5f, 20f)]
     private float tiempoIntervalo;
 
+    private PoolObjetos poolObjetos;
+
+    private void Awake()
+    {
+        poolObjetos = GetComponent<PoolObjetos>();
+    }
     void Start()
     {
         InvokeRepeating(nameof(GenerarObjetoAleatorio), tiempoEspera, tiempoIntervalo);
@@ -21,9 +27,32 @@ public class GeneradorObjAleatorio : MonoBehaviour
 
     void GenerarObjetoAleatorio()
     {
-        int indexAleatorio = Random.Range(0, orbesPrefabs.Length);
-        GameObject prefabAleatorio = orbesPrefabs[indexAleatorio];
-        Instantiate(prefabAleatorio, transform.position, Quaternion.identity);
+        int indexAleatorio = Random.Range(0, cantidadAleatorios);
+        GameObject pooledFuego = poolObjetos.GetPooledFuego();
+        GameObject pooledBaba = poolObjetos.GetPooledBaba();
+        GameObject pooledHielo = poolObjetos.GetPooledHielo();
+        if(indexAleatorio == 0 && pooledFuego != null)
+        {
+            pooledFuego.transform.position = transform.position;
+            pooledFuego.transform.rotation = Quaternion.identity;
+            pooledFuego.SetActive(true);
+        }
+
+        if (indexAleatorio == 1 && pooledBaba != null)
+        {
+            pooledBaba.transform.position = transform.position;
+            pooledBaba.transform.rotation = Quaternion.identity;
+            pooledBaba.SetActive(true);
+        }
+
+        if (indexAleatorio == 2 && pooledHielo != null)
+        {
+            pooledHielo.transform.position = transform.position;
+            pooledHielo.transform.rotation = Quaternion.identity;
+            pooledHielo.SetActive(true);
+        }
+        //GameObject prefabAleatorio = orbesPrefabs[indexAleatorio];
+        //Instantiate(prefabAleatorio, transform.position, Quaternion.identity);
     }
     private void OnBecameInvisible()
     {

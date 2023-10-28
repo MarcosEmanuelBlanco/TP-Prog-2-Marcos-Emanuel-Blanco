@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 2555263392175033208}
   - component: {fileID: -6164694317799517943}
   - component: {fileID: 7278244927139199108}
+  - component: {fileID: -8892983642855803406}
+  - component: {fileID: -6131091297980542686}
   m_Layer: 6
   m_Name: Jefe
   m_TagString: Jefe
@@ -241,10 +243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aad11963b734b4eba6a56b19385b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoEntreDisparos: 10
-  tiempoEntreSaltos: 10
+  tiempoEntreDisparos: 5
+  tiempoEntreSaltos: 5
   fuerzaSalto: 40
-  tiempoEntreCorreteos: 10
+  tiempoEntreCorreteos: 5
   tiempoDeCarga: 2
   duracionDeCorreteo: 2
   velocidadCorreteo: 6
@@ -277,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d19e41ff4ab6d439fc87792b0bc0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: 2
   vidaEnemigo: 100
   valorPorEliminacion: 1
 --- !u!95 &7278244927139199108
@@ -301,6 +302,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8892983642855803406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087535408670997553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d109f835d2ce5ef4fb1c5846705f4278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dagnoColision: 2
+--- !u!114 &-6131091297980542686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087535408670997553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ebf30cec1dd7c40bcaded28d7e5bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duracionFuego: 3
+  dagno: -1
+  multiplicador: -5
+  duracionBaba: 3
+  reduccionBaba: 2
+  reduccionBabaJefe: 1
+  duracionHielo: 3
+  reduccionHielo: 1
+  reduccionHieloJefe: 1
 --- !u!1 &1149772514253336720
 GameObject:
   m_ObjectHideFlags: 0

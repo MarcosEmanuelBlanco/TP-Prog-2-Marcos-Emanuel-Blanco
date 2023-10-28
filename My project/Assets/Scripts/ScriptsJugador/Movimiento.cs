@@ -15,8 +15,6 @@ public class Movimiento : MonoBehaviour
 
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
-    private Animator miAnimator;
-
     private BoxCollider2D miCollider2D;
 
     private int saltarMask;
@@ -26,7 +24,6 @@ public class Movimiento : MonoBehaviour
     private void OnEnable()
     {
         miRigidbody2D = GetComponent<Rigidbody2D>();
-        miAnimator = GetComponent<Animator>();
         miCollider2D = GetComponent<BoxCollider2D>();
         saltarMask = LayerMask.GetMask("Plataformas");
     }
@@ -38,8 +35,8 @@ public class Movimiento : MonoBehaviour
         direccion = new Vector2(moverHorizontal, 0f);
         int velocidadX = (int)miRigidbody2D.velocity.x;
         FlipHorizontal();
-        miAnimator.SetInteger("Velocidad", velocidadX);
-        miAnimator.SetBool("EnAire", !EnContactoConPlataforma());
+        gameObject.GetComponent<AnimacionesJugador>().AnimacionMovimientoJugador(velocidadX);
+        gameObject.GetComponent<AnimacionesJugador>().AnimacionSaltoJugador(!EnContactoConPlataforma());
     }
     private void FixedUpdate()
     {

@@ -12,6 +12,7 @@ public class JefeRocoso : MonoBehaviour
     [SerializeField] float tiempoDeCarga; //Variable que se usa para demorar el disparo y ejecutar una animación (no implementada aún).
     [SerializeField] float duracionDeCorreteo;
     [SerializeField] float velocidadCorreteo;
+    private float velocidadCorreteoReal;
     [SerializeField] float divisorDuracionDeCorreteo;
     [SerializeField] private Vector2 tamanoEstruendo;
     [SerializeField] GameObject[] orbesRojas;
@@ -34,6 +35,7 @@ public class JefeRocoso : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        velocidadCorreteoReal = velocidadCorreteo;
         estadoActual = Disparo;
         StartCoroutine(ComportamientoJefe());
     }
@@ -160,5 +162,10 @@ public class JefeRocoso : MonoBehaviour
     public void ModificarVelocidadCorreteo(float puntos)
     {
         velocidadCorreteo += puntos;
+    }
+
+    public void RestaurarVelocidadCorreteo()
+    {
+        velocidadCorreteo = velocidadCorreteoReal;
     }
 }

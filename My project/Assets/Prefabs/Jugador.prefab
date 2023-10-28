@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7702978792266049066}
   - component: {fileID: 393561281325660}
   - component: {fileID: 1710782152065630241}
+  - component: {fileID: 6875087363981008918}
   m_Layer: 8
   m_Name: Jugador
   m_TagString: Player
@@ -364,6 +365,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
+  OnAngryRockKillProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCalmRockKillProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBigRockKillProgress:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6875087363981008918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442629190315670105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0510f6507ac183246b6d6433dd9b9a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7796095046029067376
 GameObject:
   m_ObjectHideFlags: 0

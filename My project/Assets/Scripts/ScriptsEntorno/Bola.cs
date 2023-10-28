@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Bola : MonoBehaviour
 {
-    [SerializeField] private Vector2 velocidadReboteBola;
-    private Rigidbody rb;
-    // Start is called before the first frame update
-    private void OnEnable()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        rb = GetComponent<Rigidbody>();
-    }
-    public void Rebotar(Vector2 puntoImpacto)
-    {
-        rb.velocity = new Vector2(-velocidadReboteBola.x * puntoImpacto.x, velocidadReboteBola.y);
+        if (collision.gameObject.CompareTag("Enemigos") || collision.gameObject.CompareTag("EnemigosEnojados") || collision.gameObject.CompareTag("Jefe"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

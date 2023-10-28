@@ -5,11 +5,12 @@ using UnityEngine;
 public class MovimientoRocoso : MonoBehaviour
 {
 
-    private Animator miAnimator;
-    private AtaqueRocoso vinculoAtaque;
+    //private Animator miAnimator;
+    //private AtaqueRocoso vinculoAtaque;
     [SerializeField] private Transform sensorBorde;
     [SerializeField] private float distancia;
     [SerializeField] private float velocidad;
+    private float velocidadReal;
     [SerializeField] private bool preferenciaDeteccion;
     [SerializeField] private bool yendoDerecha;
     public bool aturdido;
@@ -19,14 +20,15 @@ public class MovimientoRocoso : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        miAnimator = GetComponent<Animator>();
+        velocidadReal = velocidad;
+        //miAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        vinculoAtaque = GetComponent<AtaqueRocoso>();
+        //vinculoAtaque = GetComponent<AtaqueRocoso>();
     }
 
     private void FixedUpdate()
     {
-        if(vinculoAtaque.atacando == false && aturdido == false)
+        if(gameObject.GetComponent<AtaqueRocoso>().GetAtacando() == false && aturdido == false)
         {
             rb.velocity = new Vector2(velocidad, rb.velocity.y);
         }
@@ -39,14 +41,14 @@ public class MovimientoRocoso : MonoBehaviour
 
         }
     }
-    private void AnimacionMovimiento()
+    /*private void AnimacionMovimiento()
     {
-        if(vinculoAtaque.atacando == false && aturdido == false)
+        if(gameObject.GetComponent<AtaqueRocoso>().GetAtacando() == false && aturdido == false)
         {
             miAnimator.SetBool("Persiguiendo", true);
         }
 
-    }
+    }*/
 
     public void Girar()
     {
@@ -58,10 +60,12 @@ public class MovimientoRocoso : MonoBehaviour
     public IEnumerator Aturdirse()
     {
         aturdido = true;
-        miAnimator.SetBool("Aturdimiento", true);
+        //miAnimator.SetBool("Aturdimiento", true);
+        gameObject.GetComponent<EjecucionAnimaciones>().ActivarAnimacionAturdimiento();
         yield return new WaitForSeconds(duracionAturdimiento);
         aturdido = false;
-        miAnimator.SetBool("Aturdimiento", false);
+        //miAnimator.SetBool("Aturdimiento", false);
+        gameObject.GetComponent<EjecucionAnimaciones>().DesactivarAnimacionAturdimiento();
     }
 
     private void OnDrawGizmos()
@@ -72,11 +76,21 @@ public class MovimientoRocoso : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimacionMovimiento();
+        //AnimacionMovimiento();
     }
 
     public void ModificarVelocidad(float puntos)
     {
-        velocidad += puntos;
+        velocidad = puntos;
+    }
+
+    public void RestaurarVelocidad()
+    {
+        velocidad = velocidadReal;
+    }
+
+    public bool GetAturdimiento()
+    {
+        return aturdido;
     }
 }
