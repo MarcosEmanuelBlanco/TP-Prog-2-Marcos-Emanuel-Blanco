@@ -19,7 +19,7 @@ public class JefeRocoso : MonoBehaviour
     [SerializeField] Transform[] puntoDisparoBola;
     [SerializeField] Transform areaEstruendo;
     [SerializeField] private float fuerzaEstruendo;
-    [SerializeField] private float dagnoEstruendo;
+    [SerializeField] private int dagnoEstruendo;
     private Rigidbody2D miRigidbody2D;
     private SpriteRenderer miSprite;
     private Animator miAnimator;

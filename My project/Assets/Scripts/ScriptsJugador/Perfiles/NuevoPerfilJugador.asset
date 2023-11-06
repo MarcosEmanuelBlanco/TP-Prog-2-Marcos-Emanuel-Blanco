@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979db34debbd809468527e725bc2dc38, type: 3}
   m_Name: NuevoPerfilJugador
   m_EditorClassIdentifier: 
-  vida: 20
-  vidaMaxima: 20
+  vida: 5
+  vidaMaxima: 5
   velocidad: 12
   fuerzaSalto: 8
   velocidadRebote: {x: 10, y: 1}
@@ -22,7 +22,7 @@ MonoBehaviour:
   radioGolpe: 0.8
   dagnoGolpe: 1
   intervaloEntreGolpes: 0.6
-  esperaSiguienteAtaque: -0.0057540364
+  esperaSiguienteAtaque: -0.00096593215
   ataqueHabilitado: 1
   rocososComunesEliminados: 0
   rocososEnojadosEliminados: 0

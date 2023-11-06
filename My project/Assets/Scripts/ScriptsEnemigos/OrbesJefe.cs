@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrbesJefe : MonoBehaviour
 {
-    [SerializeField] float dagno;
+    [SerializeField] int dagno;
     [SerializeField] float duracionProyectil;
     [SerializeField] float divisorDuracionProyectil;
     [SerializeField] float velocidadProyectil;

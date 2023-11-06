@@ -6,11 +6,11 @@ using UnityEngine;
 public class PerfilJugador : ScriptableObject
 {
     [Header("Configuracion Vida")]
-    [SerializeField] private float vida;
-    public float Vida { get => vida; set => vida = value;}
+    [SerializeField] private int vida;
+    public int Vida { get => vida; set => vida = value;}
 
-    [SerializeField] private float vidaMaxima;
-    public float VidaMaxima { get => vidaMaxima; set => vidaMaxima = value; }
+    [SerializeField] private int vidaMaxima;
+    public int VidaMaxima { get => vidaMaxima; set => vidaMaxima = value; }
 
     [Header("Configuracion Movimiento")]
     [SerializeField] float velocidad = 5f;

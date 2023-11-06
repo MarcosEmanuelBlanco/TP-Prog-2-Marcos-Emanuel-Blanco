@@ -20,6 +20,10 @@ public class Enemigo : MonoBehaviour
         Muerte();
     }
 
+    public bool GetActive()
+    {
+        return gameObject.activeInHierarchy;
+    }
 
     private void Muerte()
     {
@@ -31,21 +35,31 @@ public class Enemigo : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
-        Progresion progresion = jugador.GetComponent<Progresion>();
-        if (gameObject.CompareTag("Enemigos"))
+        if(GameObject.FindGameObjectWithTag("Player") != null)
         {
-            progresion.EliminarRocosoComun(valorPorEliminacion);
-        }
+            GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+        if(jugador.GetComponent<Progresion>() != null)
+        {
+            Progresion progresion = jugador.GetComponent<Progresion>();
+            if (gameObject.CompareTag("Enemigos"))
+            {
+                progresion.EliminarRocosoComun(valorPorEliminacion);
 
-        if (gameObject.CompareTag("EnemigosEnojados"))
-        {
-            progresion.EliminarRocosoEnojado(valorPorEliminacion);
-        }
+            }
 
-        if (gameObject.CompareTag("Jefe"))
-        {
-            progresion.EliminarGranRocoso(valorPorEliminacion);
+            if (gameObject.CompareTag("EnemigosEnojados"))
+            {
+                progresion.EliminarRocosoEnojado(valorPorEliminacion);
+
+            }
+
+            if (gameObject.CompareTag("Jefe"))
+            {
+                progresion.EliminarGranRocoso(valorPorEliminacion);
+
+            }
         }
     }
+        }
+        
 }

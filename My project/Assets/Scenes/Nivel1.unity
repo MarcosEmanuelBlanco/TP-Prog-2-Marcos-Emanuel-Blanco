@@ -1857,6 +1857,11 @@ Transform:
   - {fileID: 759053572}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &573288252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2451800701213782428, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+  m_PrefabInstance: {fileID: 143954677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &609720810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1951,6 +1956,11 @@ Transform:
   - {fileID: 30801975}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &642869166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5185620239720682576, guid: f6263e4dd02c601448378e9a2200863a, type: 3}
+  m_PrefabInstance: {fileID: 30801974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &726060717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2296,6 +2306,11 @@ Transform:
   - {fileID: 382314704}
   m_Father: {fileID: 339515034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &942279260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2451800701213782428, guid: a11530505784eca458d6114e1ddc0dc7, type: 3}
+  m_PrefabInstance: {fileID: 1059642451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &948902601
 GameObject:
   m_ObjectHideFlags: 0
@@ -7138,6 +7153,68 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &969771528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969771530}
+  - component: {fileID: 969771529}
+  m_Layer: 0
+  m_Name: GameManagerSingleton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &969771529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969771528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703f4b51a310fa046ba1a4455a9cc365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
+  pauseMenu: {fileID: 158340299}
+  gameOverMenu: {fileID: 47950567}
+  victoryMenu: {fileID: 1267424761}
+  music: {fileID: 754364261}
+  enemigos:
+  - {fileID: 642869166}
+  - {fileID: 1639279386}
+  - {fileID: 1484865093}
+  - {fileID: 1810556487}
+  - {fileID: 573288252}
+  - {fileID: 942279260}
+  - {fileID: 1087535408670997553, guid: 757d96e2d63212c468838fe6a45d606a, type: 3}
+  vidaSing: 0
+  RocESing: 0
+  RocCSing: 0
+  GranRocSing: 0
+  enemigosActivos: 00000000000000
+--- !u!4 &969771530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969771528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.310715, y: 17.533846, z: -0.290114}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017553836
 GameObject:
   m_ObjectHideFlags: 0
@@ -12289,7 +12366,6 @@ GameObject:
   - component: {fileID: 1170486149}
   - component: {fileID: 1170486148}
   - component: {fileID: 1170486152}
-  - component: {fileID: 1170486153}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -12406,23 +12482,6 @@ MonoBehaviour:
   miTextoRocososEnojados: {fileID: 134498356}
   miTextoRocososComunes: {fileID: 21280006}
   miTextoGranRocoso: {fileID: 233723562}
---- !u!114 &1170486153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170486147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703f4b51a310fa046ba1a4455a9cc365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  perfilJugador: {fileID: 11400000, guid: db1480c774ed47b4c970a876d7a20a0e, type: 2}
-  pauseMenu: {fileID: 158340299}
-  gameOverMenu: {fileID: 47950567}
-  victoryMenu: {fileID: 1267424761}
-  music: {fileID: 754364261}
 --- !u!1 &1203432963
 GameObject:
   m_ObjectHideFlags: 0
@@ -12929,6 +12988,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf07fb7ba039d384198f730b0bc890ae, type: 3}
+--- !u!1 &1484865093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5185620239720682576, guid: f6263e4dd02c601448378e9a2200863a, type: 3}
+  m_PrefabInstance: {fileID: 726060717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1502633005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13273,6 +13337,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4706986375881155795, guid: 8ec48b13450367b43a5cc15376cb3036, type: 3}
   m_PrefabInstance: {fileID: 1584675626}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1639279386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5621386928965905315, guid: b213f61bce4273b4d8ade1eab4d25547, type: 3}
+  m_PrefabInstance: {fileID: 1502633005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732937847
 GameObject:
   m_ObjectHideFlags: 0
@@ -13348,6 +13417,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732937847}
   m_CullTransparentMesh: 1
+--- !u!1 &1810556487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5621386928965905315, guid: b213f61bce4273b4d8ade1eab4d25547, type: 3}
+  m_PrefabInstance: {fileID: 517948221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1824009498
 GameObject:
   m_ObjectHideFlags: 0
@@ -27161,3 +27235,4 @@ SceneRoots:
   - {fileID: 1565396163}
   - {fileID: 1170486151}
   - {fileID: 1080041225}
+  - {fileID: 969771530}

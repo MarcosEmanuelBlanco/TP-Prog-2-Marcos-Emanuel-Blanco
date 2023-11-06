@@ -20,19 +20,21 @@ public class Jugador : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         miAnimator = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Jugador"), LayerMask.NameToLayer("Enemigos"), false);
-        OnHealthChange.Invoke(perfilJugador.Vida.ToString());
+        OnHealthChange.Invoke(GameManager.Instance.GetVidaSing().ToString());
     }
-    public void ModificarVida(float puntos)
+    public void ModificarVida(int puntos)
     {
         if (perfilJugador.Vida > 0)
         {
             perfilJugador.Vida += puntos;
-            OnHealthChange.Invoke(perfilJugador.Vida.ToString());
+            GameManager.Instance.ModificarVidaSing(puntos);
+            //perfilJugador.Vida = GameManager.Instance.GetVidaSing();
+            OnHealthChange.Invoke(GameManager.Instance.GetVidaSing().ToString());
         }
         if(perfilJugador.Vida <= 0)
         {
             perfilJugador.AtaqueHabilitado = false;
-            OnHealthChange.Invoke(perfilJugador.Vida.ToString());
+            OnHealthChange.Invoke(GameManager.Instance.GetVidaSing().ToString());
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             miAnimator.SetTrigger("Muerte");
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Jugador"), LayerMask.NameToLayer("Enemigos"), true);

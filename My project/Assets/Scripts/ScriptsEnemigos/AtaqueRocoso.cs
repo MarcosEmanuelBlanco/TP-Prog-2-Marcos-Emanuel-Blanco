@@ -5,21 +5,17 @@ using UnityEngine;
 public class AtaqueRocoso : MonoBehaviour
 {
     public bool atacando;
-    //private MovimientoRocoso vinculoMovimiento;
-    [SerializeField] private float dagnoGolpe;
+    [SerializeField] private int dagnoGolpe;
     [SerializeField] private float radioAtaque;
     [SerializeField] private float intervaloEntreAtaques;
     [SerializeField] private Transform controladorGolpeEnemigo;
-    //private Animator miAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        //miAnimator = GetComponent<Animator>();
-        //vinculoMovimiento = GetComponent<MovimientoRocoso>();
         CausarDagno();
     }
 
-    public void ModificarDagnoAtaque(float puntos)
+    public void ModificarDagnoAtaque(int puntos)
     {
         dagnoGolpe += puntos;
     }
@@ -33,15 +29,12 @@ public class AtaqueRocoso : MonoBehaviour
                 if (col.CompareTag("Player"))
                 {
                     col.transform.GetComponent<Jugador>().ModificarVida(-dagnoGolpe);
-                    //miAnimator.SetTrigger("Atacando");
-                    //miAnimator.SetBool("Persiguiendo", false);
                     gameObject.GetComponent<EjecucionAnimaciones>().ActivarAnimacionAtaque();
                     atacando = true;
                 }
                 else
                 {
                     atacando = false;
-                    //miAnimator.SetBool("Persiguiendo", true);
                     gameObject.GetComponent<EjecucionAnimaciones>().ActivarAnimacionMovimiento();
                 }
             }

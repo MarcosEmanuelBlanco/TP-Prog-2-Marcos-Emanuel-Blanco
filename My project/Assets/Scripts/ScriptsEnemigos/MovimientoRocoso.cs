@@ -34,7 +34,7 @@ public class MovimientoRocoso : MonoBehaviour
         }
         RaycastHit2D rayoSensorBorde = Physics2D.Raycast(sensorBorde.position, Vector2.down, distancia);
 
-        if (rayoSensorBorde == preferenciaDeteccion)
+        if (rayoSensorBorde == preferenciaDeteccion && gameObject.GetComponent<AtaqueRocoso>().GetAtacando() == false)
         {
            
             Girar();
